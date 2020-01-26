@@ -5,3 +5,12 @@
     max-height: 70vh;
     overflow: scroll;
 }
+
+ul.card-list {
+    list-style-type: none;
+    padding-inline-start: 0;
+}
+
+span.card-bold {
+    font-weight: 700;
+}

@@ -9,12 +9,12 @@
         <h5 class="title text-left">Statistiken</h5>       
         <div class="card">
             <div class="card-body text-left">
-                <ul style="list-style-type: none; padding-inline-start: 0;">
-                        <li>Fahrzeit in Sekunden: <span style="font-weight: 700;">{{this.dataService.dtinsecs}}</span> Sekunden.</li>
-                        <li>Höchstgeschwindigkeit: <span style="font-weight: 700;">{{this.dataService.fastestspeed}}</span> km/h.</li>
-                        <li>Durchschnittsgeschwindigkeit: <span style="font-weight: 700;">{{this.dataService.average.toFixed(6)}}</span> km/h.</li>
-                        <li>Minuten über 100km/h: <span style="font-weight: 700;">{{this.dataService.minover100.toFixed(6)}}</span> Minuten.</li>
-                        <li>Phasen über 100km/h: <span style="font-weight: 700;">{{this.dataService.phasesover100}}</span>.</li>
+                <ul class="card-list">
+                        <li>Fahrzeit in Sekunden: <span class="card-bold">{{this.dataService.dtinsecs}}</span> Sekunden.</li>
+                        <li>Höchstgeschwindigkeit: <span class="card-bold">{{this.dataService.fastestspeed}}</span> km/h.</li>
+                        <li>Durchschnittsgeschwindigkeit: <span class="card-bold">{{this.dataService.average.toFixed(6)}}</span> km/h.</li>
+                        <li>Minuten über 100km/h: <span class="card-bold">{{this.dataService.minover100.toFixed(6)}}</span> Minuten.</li>
+                        <li>Phasen über 100km/h: <span class="card-bold">{{this.dataService.phasesover100}}</span>.</li>
                 </ul>
                 <button type="button" (click)="reset()" class="btn btn-outline-danger">Daten löschen</button>
 
