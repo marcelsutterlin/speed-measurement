@@ -4,10 +4,11 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class DataService {
-  valuehistory: Array<number>;
+  valuehistory: Array<number> = [];
+
   constructor() { }
 
-  addValue(speed) {
+  addValue(speed: number) {
     this.valuehistory.push(speed);
   }
 
