@@ -9,9 +9,14 @@
         <h5 class="title text-left">Statistiken</h5>       
         <div class="card">
             <div class="card-body text-left">
-                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <button type="button" class="btn btn-outline-danger">Daten löschen</button>
+                <ul style="list-style-type: none; padding-inline-start: 0;">
+                        <li>Fahrzeit in Sekunden: <span style="font-weight: 700;">{{this.dataService.dtinsecs}}</span> Sekunden.</li>
+                        <li>Höchstgeschwindigkeit: <span style="font-weight: 700;">{{this.dataService.fastestspeed}}</span> km/h.</li>
+                        <li>Durchschnittsgeschwindigkeit: <span style="font-weight: 700;">{{this.dataService.average.toFixed(6)}}</span> km/h.</li>
+                        <li>Minuten über 100km/h: <span style="font-weight: 700;">{{this.dataService.minover100.toFixed(6)}}</span> Minuten.</li>
+                        <li>Phasen über 100km/h: <span style="font-weight: 700;">{{this.dataService.phasesover100}}</span>.</li>
+                </ul>
+                <button type="button" (click)="reset()" class="btn btn-outline-danger">Daten löschen</button>
 
             </div>
         </div>

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../data.service'
+import { TouchSequence } from 'selenium-webdriver';
 
 
 @Component({
@@ -13,6 +14,11 @@ export class HistoryComponent implements OnInit {
    }
   
   ngOnInit() {
+
+  }
+
+  reset(){
+    this.dataService.reset();
   }
 
 }
