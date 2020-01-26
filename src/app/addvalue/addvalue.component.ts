@@ -6,7 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./addvalue.component.css']
 })
 export class AddvalueComponent implements OnInit {
-
+  public newvalue: number;
+  
   constructor() { }
 
   ngOnInit() {
