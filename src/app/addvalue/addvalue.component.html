@@ -2,7 +2,7 @@
     <span class="addvalue-label mt-3">Neue Messung hinzufügen</span>
     <div class="input-group mb-3 mt-3">
         <!--Mininum 0, maximum 300. Negative Geschwindigkeit oder Text nicht zulaessig.-->
-        <input [(ngModel)]="newvalue" type="number" min="0" max="300" class="form-control col-xs-4" aria-label="Wert in km/h in der Sekunde.">
+        <input [(ngModel)]="newvalue" type="number" min="0" max="300" class="form-control col-xs-4" required aria-label="Wert in km/h in der Sekunde.">
         <div class="input-group-append">
         <span class="input-group-text">km/h</span>
         </div>
