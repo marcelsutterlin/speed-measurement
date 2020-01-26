@@ -27,3 +27,6 @@ describe('AddvalueComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+
+// all tests are in app.component.spec.ts

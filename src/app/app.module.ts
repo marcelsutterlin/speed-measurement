@@ -8,6 +8,8 @@ import { AppComponent } from './app.component';
 import { HistoryComponent } from './history/history.component';
 import { AddvalueComponent } from './addvalue/addvalue.component';
 
+
+//added formsmodule to enable ngModel within forms
 @NgModule({
   declarations: [
     AppComponent,

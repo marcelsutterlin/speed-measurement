@@ -15,14 +15,21 @@ export class DataService {
   constructor() { }
 
   addValue(speed: number) {
-    this.valuehistory.push(speed);
+    //add a new value to the end of the array
+    // another check if values are correct
+    if (speed > 0 && speed < 300 && typeof speed  == "number"){
+      this.valuehistory.push(speed);
+    }
+    
   }
 
   getValues() {
+    // return the array with all values
     return this.valuehistory;
   }
 
   reset() {
+    //reset all values to their default values
     this.valuehistory = [];
     this.dtinsecs = 0;
     this.fastestspeed = 0;

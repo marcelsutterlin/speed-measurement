@@ -1,4 +1,6 @@
 
+
+/*prevent endless pages by enabling scrolling in the history pane.*/
 .historie {
     max-height: 70vh;
     overflow: scroll;

@@ -11,6 +11,8 @@ export class AddvalueComponent implements OnInit {
 
 
   public addValue(){
+    // add a value if its between 0 and 299 and a number
+    // if not, throw an alert.
     if (this.newvalue > 0 && this.newvalue < 300 && typeof this.newvalue  == "number"){
       this.dataService.addValue(this.newvalue);
       this.dataService.updateStats();
@@ -32,6 +34,7 @@ export class AddvalueComponent implements OnInit {
     }
 
   }
+  // inject the data service
   constructor(private dataService: DataService) {
    }
 

@@ -6,6 +6,12 @@ import { AddvalueComponent } from './addvalue/addvalue.component';
 import { FormsModule } from '@angular/forms';
 import { DataService } from './data.service';
 
+
+
+/*
+All tests are within this document, since the app is not too big and 
+reading the code is easier this way.
+*/
 describe('AppComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
@@ -102,7 +108,7 @@ describe("DataService", () => {
 
 
   // test the minutes over 100km/h
-  it("calculate the minutes over 100 correctly", () => {
+  it("should calculate the minutes over 100 correctly", () => {
     service.addValue(150);
     service.updateStats();
     service.addValue(200);
@@ -114,6 +120,22 @@ describe("DataService", () => {
 
     expect(service.minover100).toEqual(0.05);
   });
+
+  //test whether service accepts negative numbers
+  it("should not accept negative values", () => {
+    service.addValue(-10);
+
+    expect(service.valuehistory.length).toEqual(0);
+  });
+
+    //test whether service accepts numbers bigger 299
+    it("should not accept values above 299", () => {
+      service.addValue(300);
+  
+      expect(service.valuehistory.length).toEqual(0);
+    });
+
+
 
 });
 

@@ -10,3 +10,6 @@ describe('DataService', () => {
     expect(service).toBeTruthy();
   });
 });
+
+
+// tests are in app.component.spec.ts
